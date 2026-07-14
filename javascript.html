@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Vaga</title>
+    <!-- Vinculando o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Verificação de Elegibilidade</h2>
+        <p class="subtitle">Insira seus dados para verificar se você está apto para a vaga.</p>
+        
+        <form id="vagaForm">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="idade">Idade (anos):</label>
+                <input type="number" id="idade" required min="0" placeholder="Ex: 25">
+            </div>
+
+            <div class="form-group">
+                <label for="altura">Altura (metros):</label>
+                <!-- Usamos step="0.01" para permitir números decimais como 1.75 -->
+                <input type="number" id="altura" required step="0.01" min="0" placeholder="Ex: 1.75">
+            </div>
+
+            <button type="submit">Verificar Vaga</button>
+        </form>
+
+        <!-- Elemento onde a mensagem de resultado será exibida -->
+        <div id="resultado" class="resultado-box hidden"></div>
+    </div>
+
+    <!-- Vinculando o arquivo de lógica Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
